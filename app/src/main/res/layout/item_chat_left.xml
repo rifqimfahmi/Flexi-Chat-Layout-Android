@@ -26,7 +26,7 @@
             android:paddingTop="10dp"
             android:paddingRight="16dp"
             android:paddingBottom="10dp"
-            tools:background="@drawable/bg_chat_right_first">
+            tools:background="@drawable/bg_chat_right_last">
 
         </com.github.rifqimfahmi.chatbubblerevamp.custom.FlexBoxChatLayout>
 

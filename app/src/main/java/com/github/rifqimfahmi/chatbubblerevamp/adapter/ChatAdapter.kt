@@ -16,8 +16,7 @@ class ChatAdapter : RecyclerView.Adapter<ChatItem>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatItem {
-        val view = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
-        return factory.create(view, viewType)
+        return factory.create(parent, viewType)
     }
 
     override fun getItemCount(): Int {
