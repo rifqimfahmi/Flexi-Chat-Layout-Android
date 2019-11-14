@@ -2,33 +2,26 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:parentTag="android.widget.RelativeLayout">
+    tools:parentTag="android.widget.FrameLayout">
 
 
     <TextView
         android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:layout_gravity="top"
+        android:gravity="left|top"
         android:lineSpacingMultiplier="1.2"
-        android:paddingLeft="16dp"
-        android:paddingTop="10dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="10dp"
         android:textColor="#f531353b"
         android:textSize="16sp"
         tools:ignore="RtlHardcoded"
-        tools:text="Lorem Ipsum askdjnaskdn akjnsdkajsnd  sdfa sdfasdf asdf asd fasdf asdf" />
+        tools:text="Mau cari susu yang bisa buat keker dlm satu malam ada gak ya gan?" />
 
     <LinearLayout
         android:id="@+id/ll_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="right|bottom"
         android:orientation="horizontal">
 
         <ImageView

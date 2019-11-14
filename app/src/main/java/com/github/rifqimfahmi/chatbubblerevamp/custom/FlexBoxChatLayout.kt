@@ -4,11 +4,16 @@ import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
-import android.view.View
-import android.widget.RelativeLayout
+import android.view.LayoutInflater
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.github.rifqimfahmi.chatbubblerevamp.R
 
-class FlexBoxChatLayout : RelativeLayout {
+class FlexBoxChatLayout : FrameLayout {
+
+    private var message: TextView? = null
+    private var status: LinearLayout? = null
 
     constructor(context: Context?) : super(context) {
         initView(context, null)
@@ -38,7 +43,21 @@ class FlexBoxChatLayout : RelativeLayout {
 
 
     private fun initView(context: Context?, attrs: AttributeSet?) {
-        View.inflate(context, R.layout.chat_item, null)
+        LayoutInflater.from(context).inflate(R.layout.chat_item, this, true)
     }
 
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        message = rootView.findViewById(R.id.tvMessage)
+        status = rootView.findViewById(R.id.ll_status)
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+
+    }
+
+    fun setMessage(msg: String) {
+        message?.text = msg
+    }
 }

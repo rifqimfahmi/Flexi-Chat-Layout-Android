@@ -9,27 +9,26 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
         android:gravity="right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded">
 
-        <TextView
-            android:id="@+id/tvMessage"
+        <com.github.rifqimfahmi.chatbubblerevamp.custom.FlexBoxChatLayout
+            android:id="@+id/fxChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_chat_right_first"
-            android:gravity="left"
-            android:lineSpacingMultiplier="1.2"
             android:paddingLeft="16dp"
             android:paddingTop="10dp"
             android:paddingRight="16dp"
-            android:paddingBottom="10dp"
-            android:textColor="#f531353b"
-            android:textSize="16sp"
-            tools:ignore="RtlHardcoded"
-            tools:text="Lorem Ipsum askdjnaskdn akjnsdkajsnd  sdfa sdfasdf asdf asd fasdf asdf" />
+            android:paddingBottom="10dp">
+
+        </com.github.rifqimfahmi.chatbubblerevamp.custom.FlexBoxChatLayout>
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
