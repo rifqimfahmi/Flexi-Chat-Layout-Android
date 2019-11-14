@@ -5,7 +5,9 @@ import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.github.rifqimfahmi.chatbubblerevamp.R
@@ -14,6 +16,8 @@ class FlexBoxChatLayout : FrameLayout {
 
     private var message: TextView? = null
     private var status: LinearLayout? = null
+    private var checkMark: ImageView? = null
+    private var timeStamp: TextView? = null
 
     constructor(context: Context?) : super(context) {
         initView(context, null)
@@ -46,6 +50,7 @@ class FlexBoxChatLayout : FrameLayout {
         LayoutInflater.from(context).inflate(R.layout.chat_item, this, true).also {
             message = it.findViewById(R.id.tvMessage)
             status = it.findViewById(R.id.ll_status)
+            checkMark = it.findViewById(R.id.checkMark)
         }
     }
 
@@ -104,5 +109,9 @@ class FlexBoxChatLayout : FrameLayout {
 
     fun setMessage(msg: String) {
         message?.text = msg
+    }
+
+    fun removeCheckMark() {
+        checkMark?.visibility = View.GONE
     }
 }
