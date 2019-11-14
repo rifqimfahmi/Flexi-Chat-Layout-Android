@@ -10,6 +10,8 @@ object ChatUtil {
         "Selamat datang",
         "Ada yang bisa dibantu?",
         "Mau cari susu yang bisa buat keker dlm satu malam ada gak ya gan?",
+        "Mau cari susu yang bisa buat keker dlm satu malam ada gak ya gan yang mantap sehat?",
+        "Mau cari susu yang bisa buat keker gan?",
         "Oh susu qeqerinstant?",
         "Mantoel gan"
     )
