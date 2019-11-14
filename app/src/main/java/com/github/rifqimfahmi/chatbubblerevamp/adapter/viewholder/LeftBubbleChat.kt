@@ -6,7 +6,7 @@ import com.github.rifqimfahmi.chatbubblerevamp.adapter.Chat
 import com.github.rifqimfahmi.chatbubblerevamp.custom.FlexBoxChatLayout
 import kotlinx.android.synthetic.main.item_chat_left.view.*
 
-class LeftBubbleChat(itemView: View) : ChatItem(itemView) {
+abstract class LeftBubbleChat(itemView: View) : ChatItem(itemView) {
 
     override fun getChatLayout(): FlexBoxChatLayout? {
         return itemView.fxChat
@@ -17,9 +17,9 @@ class LeftBubbleChat(itemView: View) : ChatItem(itemView) {
         super.bind(chat)
     }
 
-    override fun getBackgroundDrawable(): Int {
-        return R.drawable.bg_chat_left_first
-    }
+//    override fun getBackgroundDrawable(): Int {
+//        return R.drawable.bg_chat_left_first
+//    }
 
     companion object {
         val LAYOUT = R.layout.item_chat_left

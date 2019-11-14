@@ -11,10 +11,6 @@ abstract class RightBubbleChat(itemView: View) : ChatItem(itemView) {
         return itemView.fxChat
     }
 
-//    override fun getBackgroundDrawable(): Int {
-//        return R.drawable.bg_chat_right_first
-//    }
-
     companion object {
         val LAYOUT = R.layout.item_chat_right
     }
